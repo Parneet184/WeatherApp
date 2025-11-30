@@ -1,0 +1,234 @@
+/* :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+
+:root {
+  --bg-light: #f8f9ff; /* clean bright background */
+  --text-dark: #1a1a1a;
+
+  /* Neon Gen-Z colors */
+  --neon-pink: #ff2bd8;
+  --neon-blue: #487bff;
+  --neon-purple: #b34bff;
+  --neon-cyan: #06f7f7;
+  --neon-yellow: #ffd93b;
+
+  /* Glows */
+  --glow-pink: 0 0 10px rgba(255, 43, 216, 0.7);
+  --glow-blue: 0 0 10px rgba(72, 123, 255, 0.7);
+  --glow-cyan: 0 0 10px rgba(6, 247, 247, 0.7);
+  --glow-purple: 0 0 10px rgba(179, 75, 255, 0.7);
+
+  font-family: "Inter", system-ui, Avenir, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  min-height: 100vh;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f3f0ff,
+    #e8f6ff
+  );
+}
+
+/* Headings with gradient neon text */
+h1 {
+  font-size: 3.1rem;
+  background: linear-gradient(
+    90deg,
+    var(--neon-blue),
+    var(--neon-pink),
+    var(--neon-purple)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 
+    0 4px 15px rgba(0,0,0,0.08),
+    0 0 20px rgba(72, 123, 255, 0.15);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Neon Buttons */
+button {
+  padding: 0.8em 1.6em;
+  font-size: 1.1em;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s ease;
+
+  background: linear-gradient(
+    135deg,
+    var(--neon-pink),
+    var(--neon-purple)
+  );
+  box-shadow: var(--glow-pink);
+}
+
+button:hover {
+  background: linear-gradient(
+    135deg,
+    var(--neon-blue),
+    var(--neon-cyan)
+  );
+  transform: translateY(-3px);
+  box-shadow: var(--glow-cyan);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* Neon Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid var(--neon-blue);
+  font-size: 1em;
+  outline: none;
+  transition: 0.3s;
+  background: #ffffff;
+  color: #000;
+  box-shadow: 0 0 6px rgba(72, 123, 255, 0.35);
+}
+
+input:focus {
+  border-color: var(--neon-pink);
+  box-shadow: var(--glow-pink);
+}
+
+/* Neon Links */
+a {
+  color: var(--neon-blue);
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+a:hover {
+  color: var(--neon-pink);
+  text-shadow: var(--glow-pink);
+}
+
+/* Outer container */
+.app-container {
+  text-align: center;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 40px;
+
+  background: #ffffff;
+  border-radius: 20px;
+
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 0 25px rgba(72, 123, 255, 0.15);
+}
+
+/* Neon heading */
+.app-heading {
+  font-size: 2.6rem;
+  margin-bottom: 25px;
+
+  background: linear-gradient(
+    90deg,
+    #487bff,
+    #ff2bd8,
+    #b34bff
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+
