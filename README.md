@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Weather App 🌤️
 
 A **React + Vite** application that fetches **real-time weather data** from a public API and displays structured information for any searched city.
@@ -29,4 +28,3 @@ A **React + Vite** application that fetches **real-time weather data** from a pu
 
 ---
 
-=======
